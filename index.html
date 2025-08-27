@@ -2,7 +2,7 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<title>Aparecida Nutrição</title>
+		<title>Matheus Nutrição</title>
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
@@ -11,12 +11,12 @@
 	<body>
 		<header>
 			<div class="container">
-				<h1>Aparecida Nutrição</h1>
+				<h1 class="titulo">Nutrição</h1>
 			</div>
 		</header>
 		<main>
 			<section class="container">
-				<h2>Meus Clientes</h2>
+				<h2 class="titulo-secundario">Meus Clientes</h2>
 				<table>
 					<thead>
 						<tr>
@@ -28,7 +28,7 @@
 						</tr>
 					</thead>
 					<tbody id="tabela-pacientes">
-						<tr class="paciente" >
+						<tr class="paciente" id="primeiro-paciente">
 							<td class="info-nome">Paulo</td>
 							<td class="info-peso">100</td>
 							<td class="info-altura">2.00</td>
@@ -71,13 +71,6 @@
 
 			</section>
 		</main>
-		<script>
-		var pacientes =	document.querySelector("h2");
-		pacientes.textContent = "Meus pacientes";	
-		</script>
-		<script>
-			var titulo=	document.querySelector("h1");
-			titulo.textContent = "Matheus Nutrição";	
-			</script>
+		<script src="Js/principal.js"></script>
 	</body>
 </html>
