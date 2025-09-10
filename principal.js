@@ -49,3 +49,6 @@ for(var i = 0; i < pacientes.length; i++){
     
 }
 
+titulo.addEventListener('click',function(){
+    alert("Clicou nessa bomba")
+});
