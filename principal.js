@@ -52,3 +52,12 @@ for(var i = 0; i < pacientes.length; i++){
 titulo.addEventListener('click',function(){
     alert("Clicou nessa bomba")
 });
+
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
+
+botaoAdicionar.addEventListener("click" ,
+    function(event){
+    event.preventDefault();
+    console.log("Fui clicado");
+    }
+);
