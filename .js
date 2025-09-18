@@ -12,4 +12,3 @@ function calculo2(subtração){
     var subtração = reais2 - centavos2;
     console.log(subtração);
 }
-calculo2();
