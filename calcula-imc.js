@@ -9,8 +9,7 @@ var pacientes = document.querySelectorAll(".paciente");
 
 for(var i = 0; i < pacientes.length; i++){
     var paciente = pacientes[i];
-    console.log(pacientes);
-    console.log(paciente);
+    
     //busca o elemento da altura e altera seu conteúdo
     var tdPeso = paciente.querySelector(".info-peso");
     var peso = tdPeso.textContent;
@@ -19,7 +18,7 @@ for(var i = 0; i < pacientes.length; i++){
     var altura = tdAltura.textContent;
 
     //calcula o IMC e altera no elemento
-    var IMC = peso / (altura * altura);
+    var IMC = calculaIMC(peso, altura);
 
     //valores booleanos
     var pesoValido = true;
@@ -27,7 +26,7 @@ for(var i = 0; i < pacientes.length; i++){
 
     if(pesoValido && alturaValida){
         var tdIMC = paciente.querySelector(".info-imc")
-        tdIMC.textContent = IMC.toFixed(2);
+        tdIMC.textContent = IMC;
     }
 
     //alerta caso peso e altura sejam inválidos
@@ -52,4 +51,11 @@ for(var i = 0; i < pacientes.length; i++){
 titulo.addEventListener('click',function(){
     alert("Clicou nessa bomba")
 });
+
+function calculaIMC(){
+    
+    var imc = peso / (altura * altura);
+
+    return imc.toFixed(2);
+}
 

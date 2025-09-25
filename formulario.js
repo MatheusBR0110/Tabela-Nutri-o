@@ -6,11 +6,9 @@ botaoAdicionar.addEventListener("click" ,
     
     var formulario = document.querySelector('#form-adiciona');
     
-    var nome = formulario.nome.value;
-    var peso = formulario.peso.value;
-    var altura = formulario.altura.value;
-    var gordura = formulario.gordura.value;
-
+    //Variáveis para acessar o valor do <input> a partir
+    var paciente = dadosPacientesFornulario(formulario);
+    console.log(paciente);
     //Cria o elemento <tr>
     var pacienteTr = document.createElement("tr");
 
@@ -26,13 +24,29 @@ botaoAdicionar.addEventListener("click" ,
     pesoTd.textContent = peso;
     alturaTd.textContent = altura;
     gorduraTd.textContent = gordura;
+    imcTd.textContent = calculaIMC(peso,altura);
     
     pacienteTr.appendChild(nomeTd);
     pacienteTr.appendChild(pesoTd);
     pacienteTr.appendChild(alturaTd);
     pacienteTr.appendChild(gorduraTd);
+    pacienteTr.appendChild(imcTd);
 
     var tabela = document.querySelector("#tabela-pacientes");
     tabela.appendChild(pacienteTr);
     }
 );
+
+function dadosPacientesFornulario(formulario){
+    
+    //Objeto paciente
+    var paciente = {
+        nome: formulario.nome.value,
+        peso: formulario.peso.value,
+        altura: formulario.altura.value,
+        gordura: formulario.gordura.value,
+        IMC: calculaIMC(formulario.peso.value, formulario.altura.value)
+    }
+    console.log(paciente);
+    return paciente;
+}
