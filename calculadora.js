@@ -6,6 +6,7 @@ titulo.textContent = "Matheus Nutrição";
 
 //Este bloco determina a variavel paciente e peso do primeiro paciente//
 var pacientes = document.querySelectorAll(".paciente");
+
 for(var i = 0; i < pacientes.length; i++){
     var paciente = pacientes[i];
 
@@ -57,15 +58,15 @@ function calculaIMC(peso, altura){
 }
 
 function validarPeso(peso){
-    if(peso >=0 && peso < 1000){
+    if(peso > 0 && peso < 1000){
         return true;
     }else{
         return false;
     }
 }
 
-function validarAltura(){
-    if(altura >=0 && altura < 3.00){
+function validarAltura(altura){
+    if(altura > 0.00 && altura < 3.00){
         return true;
     }else{
         return false;
